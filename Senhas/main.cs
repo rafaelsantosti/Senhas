@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Media;
 
 namespace Senhas
 {
+    
     public partial class main : Form
     {
+        int segundo;
         public main()
         {
             InitializeComponent();
-        }
+            
+    }
 
         private void btn_senha_Click(object sender, EventArgs e)
         {
@@ -349,9 +353,10 @@ namespace Senhas
         {
             string dia = Convert.ToDateTime(DateTime.Now).ToString("yyyy-MM-dd");
             string data_senha, cod_sus, senha, chamada;
-
-
             
+            SoundPlayer alarme = new SoundPlayer("alarm.wav");
+
+
 
             MySqlConnection conexao = new MySqlConnection(global.strConn);
             conexao.Open();
@@ -381,9 +386,20 @@ namespace Senhas
                 MySqlCommand deletar = new MySqlCommand("delete from sistema.senhas where senha = '" + senha + "';", conexao);
                 deletar.ExecuteNonQuery();
                 conexao.Close();
+
+                conexao.Open();
+                MySqlCommand telao = new MySqlCommand("insert into sistema.senhatelao(senha,data_senha) values  ('" + senha + "','"+data_senha+"');", conexao);
+                telao.ExecuteNonQuery();
+                conexao.Close();
+
                 lbl_senha.Visible = true;
                 lbl_senha.Text = senha;
+                segundo = 8;
+                timer1.Enabled = true;
+                
                 MessageBox.Show("SENHA CHAMADA");
+                
+                
 
             }
             else
@@ -470,7 +486,25 @@ namespace Senhas
             fmedico.Show();
         }
 
-        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (segundo % 2 == 0)
+            {
+                lbl_senha.BackColor = Control.DefaultBackColor;
+
+            }
+            else
+            {
+                lbl_senha.BackColor = Color.Red;
+
+
+            }
+            if (segundo < 1)
+            {
+                timer1.Enabled = false;
+            }
+            segundo--;
+        }
     }
     }
 

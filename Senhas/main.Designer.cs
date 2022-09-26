@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_pacientes = new System.Windows.Forms.DataGridView();
             this.btn_carregar = new System.Windows.Forms.Button();
             this.btn_senha = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             this.btn_senhasatendidashoje = new System.Windows.Forms.Button();
             this.btn_pacientes = new System.Windows.Forms.Button();
             this.medico = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,10 +69,10 @@
             this.dgv_pacientes.Name = "dgv_pacientes";
             this.dgv_pacientes.ReadOnly = true;
             this.dgv_pacientes.RowHeadersVisible = false;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_pacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_pacientes.Size = new System.Drawing.Size(571, 390);
@@ -216,7 +218,6 @@
             this.tbox_filtro.Name = "tbox_filtro";
             this.tbox_filtro.Size = new System.Drawing.Size(148, 20);
             this.tbox_filtro.TabIndex = 14;
-            
             this.tbox_filtro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbox_filtro_KeyUp);
             // 
             // btn_listarsenha
@@ -271,6 +272,11 @@
             this.medico.Text = "FORMS MEDICO";
             this.medico.UseVisualStyleBackColor = true;
             this.medico.Click += new System.EventHandler(this.medico_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // main
             // 
@@ -327,5 +333,6 @@
         private System.Windows.Forms.Button btn_senhasatendidashoje;
         private System.Windows.Forms.Button btn_pacientes;
         private System.Windows.Forms.Button medico;
+        private System.Windows.Forms.Timer timer1;
     }
 }

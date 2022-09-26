@@ -53,6 +53,12 @@
     <Compile Include="cadastropaciente.Designer.cs">
       <DependentUpon>cadastropaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +80,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recepcao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recepcao.Designer.cs">
+      <DependentUpon>recepcao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="telao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telao.Designer.cs">
+      <DependentUpon>telao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="cadastropaciente.resx">
       <DependentUpon>cadastropaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -95,6 +116,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="recepcao.resx">
+      <DependentUpon>recepcao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telao.resx">
+      <DependentUpon>telao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_pacientes = new System.Windows.Forms.DataGridView();
+            this.btn_chamar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +96,16 @@
             this.dgv_pacientes.TabIndex = 1;
             this.dgv_pacientes.DoubleClick += new System.EventHandler(this.dgv_pacientes_DoubleClick);
             // 
+            // btn_chamar
+            // 
+            this.btn_chamar.Location = new System.Drawing.Point(1629, 21);
+            this.btn_chamar.Name = "btn_chamar";
+            this.btn_chamar.Size = new System.Drawing.Size(155, 89);
+            this.btn_chamar.TabIndex = 2;
+            this.btn_chamar.Text = "CHAMAR PROXIMA SENHA";
+            this.btn_chamar.UseVisualStyleBackColor = true;
+            this.btn_chamar.Click += new System.EventHandler(this.btn_chamar_Click);
+            // 
             // medico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +113,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1796, 795);
+            this.Controls.Add(this.btn_chamar);
             this.Controls.Add(this.dgv_pacientes);
             this.Name = "medico";
             this.Text = "medico";
@@ -116,5 +128,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_pacientes;
+        private System.Windows.Forms.Button btn_chamar;
     }
 }

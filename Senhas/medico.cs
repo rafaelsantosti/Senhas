@@ -13,6 +13,7 @@ namespace Senhas
 {
     public partial class medico : Form
     {
+        
         public medico()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace Senhas
 
         private void medico_Load(object sender, EventArgs e)
         {
+            
             string dia = Convert.ToDateTime(DateTime.Now).ToString("yyyy-MM-dd");
             var dt = new DataTable();
             
@@ -64,6 +66,12 @@ namespace Senhas
             {
                 MessageBox.Show("SELECIONE UM PACIENTE PARA ALTERAR");
             }
+        }
+
+        private void btn_chamar_Click(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }
