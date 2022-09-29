@@ -265,7 +265,7 @@
             // 
             // medico
             // 
-            this.medico.Location = new System.Drawing.Point(251, 544);
+            this.medico.Location = new System.Drawing.Point(663, 529);
             this.medico.Name = "medico";
             this.medico.Size = new System.Drawing.Size(102, 50);
             this.medico.TabIndex = 19;

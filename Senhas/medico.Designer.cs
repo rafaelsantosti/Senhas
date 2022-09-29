@@ -32,9 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(medico));
             this.dgv_pacientes = new System.Windows.Forms.DataGridView();
-            this.btn_chamar = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.chamar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.repetir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_pacientes
@@ -43,20 +52,23 @@
             this.dgv_pacientes.AllowUserToDeleteRows = false;
             this.dgv_pacientes.AllowUserToResizeColumns = false;
             this.dgv_pacientes.AllowUserToResizeRows = false;
-            this.dgv_pacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_pacientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_pacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_pacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgv_pacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_pacientes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgv_pacientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_pacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_pacientes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_pacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_pacientes.ColumnHeadersHeight = 60;
+            this.dgv_pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -65,46 +77,118 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_pacientes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_pacientes.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgv_pacientes.EnableHeadersVisualStyles = false;
-            this.dgv_pacientes.GridColor = System.Drawing.Color.Red;
-            this.dgv_pacientes.Location = new System.Drawing.Point(0, 0);
+            this.dgv_pacientes.GridColor = System.Drawing.Color.Orange;
+            this.dgv_pacientes.Location = new System.Drawing.Point(12, 107);
             this.dgv_pacientes.MultiSelect = false;
             this.dgv_pacientes.Name = "dgv_pacientes";
             this.dgv_pacientes.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Moccasin;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_pacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_pacientes.RowHeadersVisible = false;
-            this.dgv_pacientes.RowHeadersWidth = 50;
-            this.dgv_pacientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_pacientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LemonChiffon;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.dgv_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_pacientes.RowTemplate.Height = 100;
-            this.dgv_pacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_pacientes.RowTemplate.Height = 40;
+            this.dgv_pacientes.RowTemplate.ReadOnly = true;
+            this.dgv_pacientes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_pacientes.Size = new System.Drawing.Size(1623, 795);
-            this.dgv_pacientes.TabIndex = 1;
+            this.dgv_pacientes.Size = new System.Drawing.Size(1150, 676);
+            this.dgv_pacientes.TabIndex = 22;
             this.dgv_pacientes.DoubleClick += new System.EventHandler(this.dgv_pacientes_DoubleClick);
             // 
-            // btn_chamar
+            // toolStrip1
             // 
-            this.btn_chamar.Location = new System.Drawing.Point(1629, 21);
-            this.btn_chamar.Name = "btn_chamar";
-            this.btn_chamar.Size = new System.Drawing.Size(155, 89);
-            this.btn_chamar.TabIndex = 2;
-            this.btn_chamar.Text = "CHAMAR PROXIMA SENHA";
-            this.btn_chamar.UseVisualStyleBackColor = true;
-            this.btn_chamar.Click += new System.EventHandler(this.btn_chamar_Click);
+            this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(50, 50);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator3,
+            this.chamar,
+            this.toolStripSeparator2,
+            this.repetir,
+            this.toolStripSeparator5,
+            this.toolStripButton3,
+            this.toolStripSeparator8});
+            this.toolStrip1.Location = new System.Drawing.Point(1, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1141, 94);
+            this.toolStrip1.TabIndex = 30;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 94);
+            // 
+            // chamar
+            // 
+            this.chamar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chamar.Image = ((System.Drawing.Image)(resources.GetObject("chamar.Image")));
+            this.chamar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.chamar.Name = "chamar";
+            this.chamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.chamar.Size = new System.Drawing.Size(122, 91);
+            this.chamar.Text = "Chamar Senha";
+            this.chamar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.chamar.ToolTipText = "Cadastrar Paciente";
+            this.chamar.Click += new System.EventHandler(this.btn_chamar_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 94);
+            // 
+            // repetir
+            // 
+            this.repetir.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repetir.Image = ((System.Drawing.Image)(resources.GetObject("repetir.Image")));
+            this.repetir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.repetir.Name = "repetir";
+            this.repetir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.repetir.Size = new System.Drawing.Size(119, 91);
+            this.repetir.Text = "Repetir Senha";
+            this.repetir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.repetir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.repetir.ToolTipText = "Cadastrar Paciente";
+            this.repetir.Click += new System.EventHandler(this.repetir_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 94);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.toolStripButton3.Size = new System.Drawing.Size(145, 91);
+            this.toolStripButton3.Text = "Atualizar Cadastro";
+            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.dgv_pacientes_DoubleClick);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 94);
             // 
             // medico
             // 
@@ -112,8 +196,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1796, 795);
-            this.Controls.Add(this.btn_chamar);
+            this.ClientSize = new System.Drawing.Size(1174, 795);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgv_pacientes);
             this.Name = "medico";
             this.Text = "medico";
@@ -121,13 +205,21 @@
             this.Load += new System.EventHandler(this.medico_Load);
             this.DoubleClick += new System.EventHandler(this.medico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private System.Windows.Forms.DataGridView dgv_pacientes;
-        private System.Windows.Forms.Button btn_chamar;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton chamar;
+        private System.Windows.Forms.ToolStripButton repetir;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
     }
 }

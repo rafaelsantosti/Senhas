@@ -31,7 +31,7 @@ namespace Senhas
         {
             var dt = new DataTable();
             string sql;
-            sql = "Select * from sistema.paciente";
+            sql = "Select * from paciente";
 
             try
             {
@@ -63,7 +63,7 @@ namespace Senhas
 
             var dt = new DataTable();
             string sql;
-            sql = "Select * from sistema.senhasatendidas";
+            sql = "Select * from senhasatendidas";
 
             try
             {
@@ -92,7 +92,7 @@ namespace Senhas
 
                 MySqlConnection conexao = new MySqlConnection(global.strConn);
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("Select data_nasc from sistema.paciente where cod_sus=12345678", conexao);
+                MySqlCommand cmd = new MySqlCommand("Select data_nasc from paciente where cod_sus=12345678", conexao);
                 MySqlDataReader dr = cmd.ExecuteReader();
 
                 dr.Read();
@@ -127,10 +127,9 @@ namespace Senhas
 
                 conexao.Open();
 
-                MySqlCommand select = new MySqlCommand("Select senha from sistema.senhas where data_senha like'" + dia + "%' order by senha desc", conexao);
+                MySqlCommand select = new MySqlCommand("Select senha from senhas where data_senha like'" + dia + "%' order by senha desc", conexao);
                 MySqlDataReader dr = select.ExecuteReader();
-               // lbl_total1.Text = Convert.ToString(dr[0]);
-               // lbl_data.Text = Convert.ToString(datasql);
+               
                 
 
                 DialogResult confirm = MessageBox.Show("Deseja tirar uma senha para : " + nome + "", "Retirar Senha", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
@@ -147,7 +146,7 @@ namespace Senhas
                         conexao.Close();
                         conexao.Open();
 
-                        string insert = "insert into sistema.senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','" + datasql + "');";
+                        string insert = "insert into senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','" + datasql + "');";
                         MySqlCommand cmdinsert = new MySqlCommand(insert, conexao);
                         cmdinsert.ExecuteNonQuery();
                         MessageBox.Show("Senha retirada");
@@ -159,7 +158,7 @@ namespace Senhas
                         conexao.Close();
                         conexao.Open();
 
-                        MySqlCommand selectsenhachamada = new MySqlCommand("Select senha from sistema.senhasatendidas where data_senha like'" + dia + "%' order by senha desc", conexao);
+                        MySqlCommand selectsenhachamada = new MySqlCommand("Select senha from senhasatendidas where data_senha like'" + dia + "%' order by senha desc", conexao);
                         MySqlDataReader dr2 = selectsenhachamada.ExecuteReader();
 
                         
@@ -175,7 +174,7 @@ namespace Senhas
 
                             conexao.Close();
                             conexao.Open();
-                            string insert = "insert into sistema.senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','" + datasql + "');";
+                            string insert = "insert into senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','" + datasql + "');";
                             MySqlCommand cmdinsert = new MySqlCommand(insert, conexao);
                             cmdinsert.ExecuteNonQuery();
                             MessageBox.Show("Senha retirada");
@@ -185,7 +184,7 @@ namespace Senhas
                         {
                             conexao.Close();
                             conexao.Open();
-                            string insert = "insert into sistema.senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','1');";
+                            string insert = "insert into senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','1');";
                             MySqlCommand cmdinsert = new MySqlCommand(insert, conexao);
                             cmdinsert.ExecuteNonQuery();
                             MessageBox.Show("Senha retirada");
@@ -235,7 +234,7 @@ namespace Senhas
 
                     MySqlConnection conexao = new MySqlConnection(global.strConn);
                     conexao.Open();
-                    string cmd = "delete  from sistema.senhas where cod_sus = " + sus + " ; delete  from sistema.paciente where cod_sus = " + sus + "";
+                    string cmd = "delete  from senhas where cod_sus = " + sus + " ; delete  from paciente where cod_sus = " + sus + "";
                     MySqlCommand command = new MySqlCommand(cmd, conexao);
                     command.ExecuteNonQuery();
                     btn_load.PerformClick();
@@ -264,7 +263,8 @@ namespace Senhas
                 string end = dgv_pacientes.CurrentRow.Cells[2].Value.ToString();
                 string data = dgv_pacientes.CurrentRow.Cells[3].Value.ToString();
                 string obs = dgv_pacientes.CurrentRow.Cells[4].Value.ToString();
-                cadastropaciente alterar = new cadastropaciente(sus, nome, end, data, obs);
+                string sexo = dgv_pacientes.CurrentRow.Cells[4].Value.ToString();
+                cadastropaciente alterar = new cadastropaciente(sus, nome, end, data, obs,sexo);
                 alterar.Show();
             }
             catch (Exception)
@@ -279,7 +279,7 @@ namespace Senhas
         {
             var dt = new DataTable();
             string sql;
-            sql = "Select * from sistema.senhas";
+            sql = "Select * from senhas";
 
             try
             {
@@ -305,7 +305,7 @@ namespace Senhas
         {
             string dia = Convert.ToDateTime(DateTime.Now).ToString("yyyy-MM-dd");
             var dt = new DataTable();
-            string sql = ("Select * from sistema.senhas where data_senha like'" + dia + "%'");
+            string sql = ("Select * from senhas where data_senha like'" + dia + "%'");
 
 
 
@@ -338,7 +338,7 @@ namespace Senhas
 
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("Select senha from sistema.senhas where data_senha like'" + dia + "%' order by senha desc", conexao);
+                MySqlCommand cmd = new MySqlCommand("Select senha from senhas where data_senha like'" + dia + "%' order by senha desc", conexao);
                 MySqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.HasRows)
@@ -360,7 +360,7 @@ namespace Senhas
 
             MySqlConnection conexao = new MySqlConnection(global.strConn);
             conexao.Open();
-            MySqlCommand cmd = new MySqlCommand("Select * from sistema.senhas where data_senha like'" + dia + "%' order by senha asc", conexao);
+            MySqlCommand cmd = new MySqlCommand("Select * from senhas where data_senha like'" + dia + "%' order by senha asc", conexao);
             MySqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.HasRows)
@@ -376,19 +376,19 @@ namespace Senhas
 
                 conexao.Close();
 
-                string cmd_insert_senhas = "insert into sistema.senhasatendidas(data_senha, data_chamada, cod_sus, senha) values('" + data_senha + "','" + chamada + "','" + cod_sus + "','" + senha + "')";
+                string cmd_insert_senhas = "insert into senhasatendidas(data_senha, data_chamada, cod_sus, senha) values('" + data_senha + "','" + chamada + "','" + cod_sus + "','" + senha + "')";
                 conexao.Open();     
                 MySqlCommand command = new MySqlCommand(cmd_insert_senhas, conexao);
                 command.ExecuteNonQuery();
                 conexao.Close();
 
                 conexao.Open();
-                MySqlCommand deletar = new MySqlCommand("delete from sistema.senhas where senha = '" + senha + "';", conexao);
+                MySqlCommand deletar = new MySqlCommand("delete from senhas where senha = '" + senha + "';", conexao);
                 deletar.ExecuteNonQuery();
                 conexao.Close();
 
                 conexao.Open();
-                MySqlCommand telao = new MySqlCommand("insert into sistema.senhatelao(senha,data_senha) values  ('" + senha + "','"+data_senha+"');", conexao);
+                MySqlCommand telao = new MySqlCommand("insert into senhatelao(senha,data_senha) values  ('" + senha + "','"+data_senha+"');", conexao);
                 telao.ExecuteNonQuery();
                 conexao.Close();
 
@@ -427,11 +427,11 @@ namespace Senhas
 
             if (filtro == "")
             {
-                sql = "Select * from sistema.paciente";
+                sql = "Select * from paciente";
             }
             else
             {
-                sql = "Select * from sistema.paciente where nome like  '"+filtro+"%' or cod_sus like '"+filtro+"%' or data_nasc like '"+filtro+"%'"; 
+                sql = "Select * from paciente where nome like  '"+filtro+"%' or cod_sus like '"+filtro+"%' or data_nasc like '"+filtro+"%'"; 
             }
 
             try
@@ -457,7 +457,7 @@ namespace Senhas
         {
             string dia = Convert.ToDateTime(DateTime.Now).ToString("yyyy-MM-dd");
             var dt = new DataTable();
-            string sql = ("Select * from sistema.senhasatendidas where data_senha like'" + dia + "%'");
+            string sql = ("Select * from senhasatendidas where data_senha like'" + dia + "%'");
 
 
 

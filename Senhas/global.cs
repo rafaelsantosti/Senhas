@@ -12,35 +12,17 @@ namespace Senhas
     class global
     {
 
-         static private string servidor = "localhost";
-         static private string bancoDados = "sistema";
-         static private string usuario = "root";
-         static private string senha = "root";
+        static private string servidor = Properties.Settings.Default.servidor;
+         static private string bancoDados = Properties.Settings.Default.bancoDados;
+        static private string usuario = Properties.Settings.Default.usuario;
+        static private string senha = Properties.Settings.Default.senha;
 
-        //conexão com o banco
-         static public string strConn = $"server={servidor};User Id={usuario};database={bancoDados};password={senha};Convert Zero Datetime=True ";
+        //string de conexao com o mysql
+        static public string strConn = "server='" + servidor + "';User Id='" + usuario + "';database='" + bancoDados + "';password='" + senha+ "';Convert Zero Datetime=True ";
+        static public string server = "server='" + servidor + "';User Id='" + usuario + "';password='" + senha + "';Convert Zero Datetime=True ";
 
-
-       //  public static MySqlConnection Conexao;
-        // public static MySqlCommand Comando;
-        // public static MySqlDataAdapter Adaptador;
-        // public static DataTable datTabela;
-
-       // public static void conectar()
-     //   {
-        //    Conexao = new MySqlConnection("server=localhost;uid=root;pwd=root");
-
-        //    Conexao.Open();
-
-       //     Comando = new MySqlCommand("use sistema",Conexao);
-
-     //       Comando.ExecuteNonQuery();
-
-            
-
-    //    }
     }
 
-
+    
 
 }

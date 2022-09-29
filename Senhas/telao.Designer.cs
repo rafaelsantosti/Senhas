@@ -42,9 +42,9 @@ namespace Senhas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_senha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 350.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 249.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_senha.ForeColor = System.Drawing.Color.Black;
-            this.lbl_senha.Location = new System.Drawing.Point(-2, 230);
+            this.lbl_senha.Location = new System.Drawing.Point(-4, 230);
             this.lbl_senha.MinimumSize = new System.Drawing.Size(300, 150);
             this.lbl_senha.Name = "lbl_senha";
             this.lbl_senha.Size = new System.Drawing.Size(1360, 374);
@@ -68,11 +68,12 @@ namespace Senhas
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 150F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(571, 4);
+            this.label1.Location = new System.Drawing.Point(-3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(787, 226);
+            this.label1.Size = new System.Drawing.Size(1359, 226);
             this.label1.TabIndex = 3;
             this.label1.Text = "SENHA";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // telao
             // 
@@ -93,8 +94,8 @@ namespace Senhas
         #endregion
 
         private System.Windows.Forms.Label lbl_senha;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer2;
+        public System.Windows.Forms.Timer timer1;
     }
 }

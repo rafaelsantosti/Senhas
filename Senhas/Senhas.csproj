@@ -33,9 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,11 +55,29 @@
     <Compile Include="cadastropaciente.Designer.cs">
       <DependentUpon>cadastropaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="confi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confi.Designer.cs">
+      <DependentUpon>confi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gerenciador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerenciador.Designer.cs">
+      <DependentUpon>gerenciador.cs</DependentUpon>
+    </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -78,8 +98,19 @@
     <Compile Include="medico.Designer.cs">
       <DependentUpon>medico.cs</DependentUpon>
     </Compile>
+    <Compile Include="servidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servidor.Designer.cs">
+      <DependentUpon>servidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="recepcao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +126,20 @@
     <EmbeddedResource Include="cadastropaciente.resx">
       <DependentUpon>cadastropaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="confi.resx">
+      <DependentUpon>confi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gerenciador.resx">
+      <DependentUpon>gerenciador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -107,15 +147,14 @@
     <EmbeddedResource Include="medico.resx">
       <DependentUpon>medico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="servidor.resx">
+      <DependentUpon>servidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="recepcao.resx">
       <DependentUpon>recepcao.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
