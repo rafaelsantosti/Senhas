@@ -38,22 +38,22 @@ namespace Senhas
             this.pd = new System.Drawing.Printing.PrintDocument();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tbox_filtro = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.retirar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.chamar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.repetir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.retirar = new System.Windows.Forms.ToolStripButton();
-            this.chamar = new System.Windows.Forms.ToolStripButton();
-            this.repetir = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +91,7 @@ namespace Senhas
             this.dgv_pacientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_pacientes.EnableHeadersVisualStyles = false;
             this.dgv_pacientes.GridColor = System.Drawing.Color.Orange;
-            this.dgv_pacientes.Location = new System.Drawing.Point(12, 106);
+            this.dgv_pacientes.Location = new System.Drawing.Point(12, 113);
             this.dgv_pacientes.MultiSelect = false;
             this.dgv_pacientes.Name = "dgv_pacientes";
             this.dgv_pacientes.ReadOnly = true;
@@ -115,8 +115,9 @@ namespace Senhas
             this.dgv_pacientes.RowTemplate.Height = 40;
             this.dgv_pacientes.RowTemplate.ReadOnly = true;
             this.dgv_pacientes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_pacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_pacientes.Size = new System.Drawing.Size(1567, 754);
+            this.dgv_pacientes.Size = new System.Drawing.Size(1567, 626);
             this.dgv_pacientes.TabIndex = 21;
             this.dgv_pacientes.DoubleClick += new System.EventHandler(this.dgv_pacientes_DoubleClick);
             // 
@@ -165,35 +166,135 @@ namespace Senhas
             this.tbox_filtro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbox_filtro_KeyUp);
             this.tbox_filtro.Click += new System.EventHandler(this.tbox_filtro_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 94);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.toolStripButton1.Size = new System.Drawing.Size(146, 91);
+            this.toolStripButton1.Text = "Cadastrar Paciente";
+            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.ToolTipText = "Cadastrar Paciente";
+            this.toolStripButton1.Click += new System.EventHandler(this.btn_cadastro_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 94);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.toolStripButton3.Size = new System.Drawing.Size(145, 91);
+            this.toolStripButton3.Text = "Atualizar Cadastro";
+            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.alterar_cadastro_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 94);
             // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.toolStripButton2.Size = new System.Drawing.Size(134, 91);
+            this.toolStripButton2.Text = "Deletar Cadastro";
+            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.btn_excluir_Click);
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 94);
+            // 
+            // retirar
+            // 
+            this.retirar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retirar.Image = ((System.Drawing.Image)(resources.GetObject("retirar.Image")));
+            this.retirar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.retirar.Name = "retirar";
+            this.retirar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.retirar.Size = new System.Drawing.Size(119, 91);
+            this.retirar.Text = "Retirar Senha";
+            this.retirar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.retirar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.retirar.ToolTipText = "Cadastrar Paciente";
+            this.retirar.Click += new System.EventHandler(this.btn_retirar_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 94);
             // 
+            // chamar
+            // 
+            this.chamar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chamar.Image = ((System.Drawing.Image)(resources.GetObject("chamar.Image")));
+            this.chamar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.chamar.Name = "chamar";
+            this.chamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.chamar.Size = new System.Drawing.Size(122, 91);
+            this.chamar.Text = "Chamar Senha";
+            this.chamar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.chamar.ToolTipText = "Cadastrar Paciente";
+            this.chamar.Click += new System.EventHandler(this.btn_senha_Click);
+            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 94);
             // 
+            // repetir
+            // 
+            this.repetir.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repetir.Image = ((System.Drawing.Image)(resources.GetObject("repetir.Image")));
+            this.repetir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.repetir.Name = "repetir";
+            this.repetir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.repetir.Size = new System.Drawing.Size(119, 91);
+            this.repetir.Text = "Repetir Senha";
+            this.repetir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.repetir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.repetir.ToolTipText = "Cadastrar Paciente";
+            this.repetir.Click += new System.EventHandler(this.repetir_Click);
+            // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 94);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.toolStripButton4.Size = new System.Drawing.Size(150, 91);
+            this.toolStripButton4.Text = "Gerenciar Senhas";
+            this.toolStripButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.btn_gerenciar_Click);
             // 
             // toolStripSeparator4
             // 
@@ -211,106 +312,6 @@ namespace Senhas
             this.lbl1.Size = new System.Drawing.Size(471, 21);
             this.lbl1.TabIndex = 30;
             this.lbl1.Text = "Pesquise pelo nome, sus ou data de nascimento do paciente:";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.toolStripButton3.Size = new System.Drawing.Size(145, 91);
-            this.toolStripButton3.Text = "Atualizar Cadastro";
-            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.alterar_cadastro_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.toolStripButton2.Size = new System.Drawing.Size(134, 91);
-            this.toolStripButton2.Text = "Deletar Cadastro";
-            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.btn_excluir_Click);
-            // 
-            // retirar
-            // 
-            this.retirar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.retirar.Image = ((System.Drawing.Image)(resources.GetObject("retirar.Image")));
-            this.retirar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.retirar.Name = "retirar";
-            this.retirar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.retirar.Size = new System.Drawing.Size(119, 91);
-            this.retirar.Text = "Retirar Senha";
-            this.retirar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.retirar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.retirar.ToolTipText = "Cadastrar Paciente";
-            this.retirar.Click += new System.EventHandler(this.btn_retirar_Click);
-            // 
-            // chamar
-            // 
-            this.chamar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chamar.Image = ((System.Drawing.Image)(resources.GetObject("chamar.Image")));
-            this.chamar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.chamar.Name = "chamar";
-            this.chamar.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.chamar.Size = new System.Drawing.Size(122, 91);
-            this.chamar.Text = "Chamar Senha";
-            this.chamar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.chamar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.chamar.ToolTipText = "Cadastrar Paciente";
-            this.chamar.Click += new System.EventHandler(this.btn_senha_Click);
-            // 
-            // repetir
-            // 
-            this.repetir.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repetir.Image = ((System.Drawing.Image)(resources.GetObject("repetir.Image")));
-            this.repetir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.repetir.Name = "repetir";
-            this.repetir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.repetir.Size = new System.Drawing.Size(119, 91);
-            this.repetir.Text = "Repetir Senha";
-            this.repetir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.repetir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.repetir.ToolTipText = "Cadastrar Paciente";
-            this.repetir.Click += new System.EventHandler(this.repetir_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.toolStripButton4.Size = new System.Drawing.Size(150, 91);
-            this.toolStripButton4.Text = "Gerenciar Senhas";
-            this.toolStripButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton4.Click += new System.EventHandler(this.btn_gerenciar_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.toolStripButton1.Size = new System.Drawing.Size(146, 91);
-            this.toolStripButton1.Text = "Cadastrar Paciente";
-            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.ToolTipText = "Cadastrar Paciente";
-            this.toolStripButton1.Click += new System.EventHandler(this.btn_cadastro_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 94);
             // 
             // recepcao
             // 
