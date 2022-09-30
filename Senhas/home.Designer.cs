@@ -44,7 +44,7 @@ namespace Senhas
             this.btn_medico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_medico.ImageIndex = 1;
             this.btn_medico.ImageList = this.imageList1;
-            this.btn_medico.Location = new System.Drawing.Point(33, 223);
+            this.btn_medico.Location = new System.Drawing.Point(34, 199);
             this.btn_medico.Name = "btn_medico";
             this.btn_medico.Size = new System.Drawing.Size(245, 120);
             this.btn_medico.TabIndex = 5;
@@ -69,7 +69,7 @@ namespace Senhas
             this.btn_recepcao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_recepcao.ImageIndex = 0;
             this.btn_recepcao.ImageList = this.imageList1;
-            this.btn_recepcao.Location = new System.Drawing.Point(33, 81);
+            this.btn_recepcao.Location = new System.Drawing.Point(34, 57);
             this.btn_recepcao.Name = "btn_recepcao";
             this.btn_recepcao.Size = new System.Drawing.Size(245, 120);
             this.btn_recepcao.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace Senhas
             this.btn_telao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_telao.ImageIndex = 2;
             this.btn_telao.ImageList = this.imageList1;
-            this.btn_telao.Location = new System.Drawing.Point(33, 366);
+            this.btn_telao.Location = new System.Drawing.Point(34, 342);
             this.btn_telao.Name = "btn_telao";
             this.btn_telao.Size = new System.Drawing.Size(245, 120);
             this.btn_telao.TabIndex = 6;
@@ -103,7 +103,7 @@ namespace Senhas
             this.btn_confi.ForeColor = System.Drawing.Color.Transparent;
             this.btn_confi.ImageKey = "cogwheel.png";
             this.btn_confi.ImageList = this.imageList2;
-            this.btn_confi.Location = new System.Drawing.Point(272, 12);
+            this.btn_confi.Location = new System.Drawing.Point(240, 12);
             this.btn_confi.Name = "btn_confi";
             this.btn_confi.Size = new System.Drawing.Size(39, 39);
             this.btn_confi.TabIndex = 7;
@@ -121,14 +121,15 @@ namespace Senhas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(323, 535);
+            this.ClientSize = new System.Drawing.Size(318, 484);
             this.Controls.Add(this.btn_confi);
             this.Controls.Add(this.btn_telao);
             this.Controls.Add(this.btn_medico);
             this.Controls.Add(this.btn_recepcao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "home";
+            this.Text = "SENHASSAUDE";
             this.Load += new System.EventHandler(this.home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

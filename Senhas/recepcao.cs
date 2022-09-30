@@ -94,9 +94,12 @@ namespace Senhas
                         {
                             conexao.Close();
                             conexao.Open();
-                            string insert = "insert into senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','1');";
+                            string insert = "insert into senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','0');";
+                            string insert2 = "insert into senhas (data_senha,cod_sus,senha) values ('" + date + "','" + sus + "','1');";
                             MySqlCommand cmdinsert = new MySqlCommand(insert, conexao);
+                            MySqlCommand cmdinsert2 = new MySqlCommand(insert2, conexao);
                             cmdinsert.ExecuteNonQuery();
+                            cmdinsert2.ExecuteNonQuery();
                             pd.Print();
 
                             conexao.Close();
@@ -118,7 +121,7 @@ namespace Senhas
         {
             var dt = new DataTable();
             string sql;
-            sql = "select cod_sus as 'SUS', nome as 'Nome', data_nasc as 'Data de Nascimento', end as 'Endereço',obs ,sexo from paciente";
+            sql = "select cod_sus as 'CNS', nome as 'Nome', data_nasc as 'Data de Nascimento', end as 'Endereço',obs ,sexo,tel from paciente";
 
             try
             {
@@ -131,7 +134,7 @@ namespace Senhas
                         dgv_pacientes.DataSource = dt;
 
                         DataGridViewColumn coluna1 = dgv_pacientes.Columns[0];
-                        coluna1.Width = 200;
+                        coluna1.Width = 220;
 
                         DataGridViewColumn coluna2 = dgv_pacientes.Columns[1];
                         coluna2.Width = 500;
@@ -145,6 +148,8 @@ namespace Senhas
 
                         dgv_pacientes.Columns[4].Visible = false;
                         dgv_pacientes.Columns[5].Visible = false;
+                        dgv_pacientes.Columns[6].Visible = false;
+
 
                     }
                 }
@@ -198,7 +203,17 @@ namespace Senhas
                     {
                         da.Fill(dt);
                         dgv_pacientes.DataSource = dt;
+                        DataGridViewColumn coluna1 = dgv_pacientes.Columns[0];
+                        coluna1.Width = 220;
 
+                        DataGridViewColumn coluna2 = dgv_pacientes.Columns[1];
+                        coluna2.Width = 500;
+
+                        DataGridViewColumn coluna3 = dgv_pacientes.Columns[2];
+                        coluna3.Width = 170;
+
+                        DataGridViewColumn coluna4 = dgv_pacientes.Columns[3];
+                        coluna4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
                 }
             }
@@ -221,19 +236,22 @@ namespace Senhas
         {
             try
             {
+                string tab = "0";
                 string sus = dgv_pacientes.CurrentRow.Cells[0].Value.ToString();
                 string nome = dgv_pacientes.CurrentRow.Cells[1].Value.ToString();
                 string data = dgv_pacientes.CurrentRow.Cells[2].Value.ToString();
                 string end = dgv_pacientes.CurrentRow.Cells[3].Value.ToString();
                 string obs = dgv_pacientes.CurrentRow.Cells[4].Value.ToString();
                 string sexo = dgv_pacientes.CurrentRow.Cells[5].Value.ToString();
-                cadastropaciente alterar = new cadastropaciente(sus, nome, end, data, obs, sexo);
+                string tel = dgv_pacientes.CurrentRow.Cells[6].Value.ToString();
+                cadastropaciente alterar = new cadastropaciente(sus, nome, end, data, obs, sexo,tel,tab);
                 alterar.Closed += (s, args) => this.atualizar();
                 alterar.Show();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("SELECIONE UM PACIENTE PARA ALTERAR");
+               // MessageBox.Show("SELECIONE UM PACIENTE PARA ALTERAR");
+                MessageBox.Show(ex.Message);
             }
         }
 

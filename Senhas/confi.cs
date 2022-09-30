@@ -124,30 +124,25 @@ namespace Senhas
         {
 
             string banco = Interaction.InputBox("Qual nome do banco a ser criado?","CRIAR DATABASE");
+
             if (banco != "")
             {
-                string testecon = "server='" + tbox_servidor.Text + "';User Id='" + tbox_login.Text + "';database='" + tbox_banco.Text + "';password='" + tbox_senha.Text + "';Convert Zero Datetime=True ";
                 try
                 {
-                    using (var con = new MySqlConnection(testecon))
-                    {
-                        con.Open();
-                        MessageBox.Show("Conexão concluida!");
-                        con.Close();
 
-                    }
+                    string criar = "create database "+banco+"; use "+banco+"; create table paciente(cod_sus char(15) primary key, nome char(250), tel char(11), end char(250), data_nasc date, obs varchar(300), sexo char(3)); create table senhas(data_senha datetime, cod_sus char(15), senha int); create table senhasatendidas(cod int primary key auto_increment, data_senha datetime, data_chamada datetime, cod_sus char(15), senha int); create table senhatelao(senha int, data_senha datetime, nome char(200), repetir int); create table info(cod_sus char(15), a int, b int, c int, d int, e int, f int, g int, h int, i int, j int, k int, l int, m int, n int, o int, p int, q int, r int, s int, t int, u int, v int, peso char(6), altura char(4))";
+                    MySqlConnection conexao = new MySqlConnection(global.server);
+                    conexao.Open();
+                    MySqlCommand command = new MySqlCommand(criar, conexao);
+                    command.ExecuteNonQuery();
+                    conexao.Close();
                 }
                 catch (Exception ex)
                 {
-
-                    MessageBox.Show("Falha: " + ex.Message);
-
+                    MessageBox.Show(ex.Message);
                 }
             }
-            else
-            {
-                MessageBox.Show("Digite um nome!","Erro",MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
             
         }
 
@@ -156,7 +151,7 @@ namespace Senhas
 
             try
             {
-                MySqlConnection conexao = new MySqlConnection(global.strConn);
+                MySqlConnection conexao = new MySqlConnection(global.server);
                 conexao.Open();
                 MySqlCommand show = new MySqlCommand("show databases;", conexao);
                 

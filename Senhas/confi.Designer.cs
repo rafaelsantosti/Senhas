@@ -29,7 +29,8 @@ namespace Senhas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(confi));
             this.tbox_servidor = new System.Windows.Forms.TextBox();
             this.tbox_banco = new System.Windows.Forms.TextBox();
             this.tbox_login = new System.Windows.Forms.TextBox();
@@ -199,7 +200,7 @@ namespace Senhas
             this.list.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.list.HideSelection = false;
             this.list.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.list.Location = new System.Drawing.Point(344, 40);
             this.list.MultiSelect = false;
             this.list.Name = "list";
@@ -233,10 +234,10 @@ namespace Senhas
             this.Controls.Add(this.tbox_login);
             this.Controls.Add(this.tbox_banco);
             this.Controls.Add(this.tbox_servidor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "confi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "confi";
-            this.TopMost = true;
+            this.Text = "CONFIGURAÇÂO BANCO DE DADOS";
             this.Load += new System.EventHandler(this.confi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

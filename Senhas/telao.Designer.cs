@@ -30,6 +30,7 @@ namespace Senhas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telao));
             this.lbl_senha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -82,9 +83,10 @@ namespace Senhas
             this.ClientSize = new System.Drawing.Size(1357, 603);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_senha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "telao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "telao";
+            this.Text = "TELA DE CHAMADAS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.telao_Load);
             this.ResumeLayout(false);

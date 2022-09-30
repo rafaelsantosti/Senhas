@@ -29,7 +29,8 @@ namespace Senhas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gerenciador));
             this.dgv_pacientes = new System.Windows.Forms.DataGridView();
             this.tbox_filtro = new System.Windows.Forms.TextBox();
             this.combo = new System.Windows.Forms.ComboBox();
@@ -56,11 +57,11 @@ namespace Senhas
             this.dgv_pacientes.ReadOnly = true;
             this.dgv_pacientes.RowHeadersVisible = false;
             this.dgv_pacientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_pacientes.RowTemplate.Height = 50;
             this.dgv_pacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -105,8 +106,9 @@ namespace Senhas
             this.Controls.Add(this.combo);
             this.Controls.Add(this.tbox_filtro);
             this.Controls.Add(this.dgv_pacientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "gerenciador";
-            this.Text = "gerenciador";
+            this.Text = "GERENCIAR SENHAS";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.gerenciador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).EndInit();

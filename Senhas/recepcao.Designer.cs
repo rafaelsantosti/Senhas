@@ -309,9 +309,9 @@ namespace Senhas
             this.lbl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.Location = new System.Drawing.Point(30, 21);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(471, 21);
+            this.lbl1.Size = new System.Drawing.Size(479, 21);
             this.lbl1.TabIndex = 30;
-            this.lbl1.Text = "Pesquise pelo nome, sus ou data de nascimento do paciente:";
+            this.lbl1.Text = "Pesquise pelo nome, CNS ou data de nascimento do paciente:";
             // 
             // recepcao
             // 
@@ -321,10 +321,11 @@ namespace Senhas
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgv_pacientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "recepcao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "recepcao";
+            this.Text = "RECEPÇÂO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.recepcao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).EndInit();

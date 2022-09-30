@@ -54,7 +54,7 @@ namespace Senhas
 
             try
             {
-                MySqlConnection conexao = new MySqlConnection(global.strConn);
+                MySqlConnection conexao = new MySqlConnection(global.server);
                 conexao.Open();
                 MySqlCommand cmd = new MySqlCommand("show databases", conexao);
                 MySqlDataReader dr = cmd.ExecuteReader();
@@ -64,17 +64,17 @@ namespace Senhas
                 {
                     banco = Convert.ToString(dr[0]);
 
-                    if (banco == "bancoparasistemasus")
+                    if (banco == "bancoparasistemasaude")
                     {
                         break;
                     }
                 }
 
-                if (banco != "bancoparasistemasus")
+                if (banco != "bancoparasistemasaude")
                 {
                     criar_banco();
 
-                    Properties.Settings.Default.bancoDados = "bancoparasistemasus";
+                    Properties.Settings.Default.bancoDados = "bancoparasistemasaude";
 
                     Properties.Settings.Default.Save();
                 }
@@ -132,20 +132,21 @@ namespace Senhas
         {
             try
             {
-                
-                string criar = "create database bancoparasistemasus;use bancoparasistemasus;create table paciente(cod_sus int primary key ,nome char(250),end char (250),data_nasc date,obs varchar(300),sexo char (3));create table senhas(data_senha datetime,cod_sus int,senha int);create table senhasatendidas(cod int primary key auto_increment, data_senha datetime, data_chamada datetime, cod_sus int,senha int ); create table senhatelao( senha int,data_senha datetime,nome char(200),repetir int);create table info(cod_sus int,a int, b int , c int , d int , e int , f int , g int , h int , i int , j int , k int , l int , m int , n int, o int , p int , q int , r int , s int , t int , u int , v int);";
+
+                string criar = "create database bancoparasistemasaude; use bancoparasistemasaude; create table paciente(cod_sus char(15) primary key, nome char(250), tel char(11), end char(250), data_nasc date, obs varchar(300), sexo char(3)); create table senhas(data_senha datetime, cod_sus char(15), senha int); create table senhasatendidas(cod int primary key auto_increment, data_senha datetime, data_chamada datetime, cod_sus char(15), senha int); create table senhatelao(senha int, data_senha datetime, nome char(200), repetir int); create table info(cod_sus char(15), a int, b int, c int, d int, e int, f int, g int, h int, i int, j int, k int, l int, m int, n int, o int, p int, q int, r int, s int, t int, u int, v int, peso char(6), altura char(4))";
                 MySqlConnection conexao = new MySqlConnection(global.server);
                 conexao.Open();
                 MySqlCommand command = new MySqlCommand(criar, conexao);
                 command.ExecuteNonQuery();
                 conexao.Close();
             }
-            catch(Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(ex.Message);
             }
         }
     }
+    }
 
     
-}
+

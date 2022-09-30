@@ -29,6 +29,7 @@ namespace Senhas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(servidor));
             this.btn_sair = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -138,9 +139,10 @@ namespace Senhas
             this.Controls.Add(this.tbox_senha);
             this.Controls.Add(this.tbox_login);
             this.Controls.Add(this.tbox_servidor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "servidor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "primeira";
+            this.Text = "CONEXAO";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.servidor_Load);
             this.ResumeLayout(false);
