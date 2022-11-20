@@ -42,7 +42,7 @@ namespace Senhas
                 
 
 
-                DialogResult confirm = MessageBox.Show("Deseja tirar uma senha para : " + nome + "", "Retirar Senha", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                DialogResult confirm = MessageBox.Show("Deseja retirar uma senha para : " + nome + "", "Retirar Senha", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
 
                 if (confirm.ToString().ToUpper() == "YES")
                 {
@@ -187,11 +187,11 @@ namespace Senhas
 
             if (filtro == "")
             {
-                sql = "select cod_sus as 'SUS', nome as 'Nome', data_nasc as 'Data de Nascimento', end as 'Endereço' , obs,sexo  from paciente";
+                sql = "select cod_sus as 'SUS', nome as 'Nome', data_nasc as 'Data de Nascimento', end as 'Endereço', obs ,sexo,tel  from paciente";
             }
             else
             {
-                sql = "select cod_sus as 'SUS', nome as 'Nome', data_nasc as 'Data de Nascimento', end as 'Endereço',obs,sexo from paciente where nome like  '" + filtro + "%' or cod_sus like '" + filtro + "%' or data_nasc like '" + filtro + "%'";
+                sql = "select cod_sus as 'SUS', nome as 'Nome', data_nasc as 'Data de Nascimento', end as 'Endereço',obs,sexo,tel from paciente where nome like  '" + filtro + "%' or cod_sus like '" + filtro + "%' or data_nasc like '" + filtro + "%'";
             }
 
             try
@@ -214,6 +214,11 @@ namespace Senhas
 
                         DataGridViewColumn coluna4 = dgv_pacientes.Columns[3];
                         coluna4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                        dgv_pacientes.Columns[4].Visible = false;
+                        dgv_pacientes.Columns[5].Visible = false;
+                        dgv_pacientes.Columns[6].Visible = false;
+
                     }
                 }
             }
@@ -236,7 +241,7 @@ namespace Senhas
         {
             try
             {
-                string tab = "0";
+                string tab = "1";
                 string sus = dgv_pacientes.CurrentRow.Cells[0].Value.ToString();
                 string nome = dgv_pacientes.CurrentRow.Cells[1].Value.ToString();
                 string data = dgv_pacientes.CurrentRow.Cells[2].Value.ToString();
